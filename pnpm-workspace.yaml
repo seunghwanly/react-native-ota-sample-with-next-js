@@ -41,3 +41,7 @@ minimumReleaseAgeExclude:
   - regexpu-core@6.5.4
   - '@babel/helper-string-parser@7.29.13'
   - electron-to-chromium@1.5.477
+
+patchedDependencies:
+  react-native-fs@2.20.0: patches/react-native-fs@2.20.0.patch
+  react-native-webview@14.0.1: patches/react-native-webview@14.0.1.patch
