@@ -1,0 +1,111 @@
+diff --git a/Package.swift b/Package.swift
+new file mode 100644
+index 0000000000000000000000000000000000000000..d5a8aec24822e709e2438ba6ea1e066ee273036f
+--- /dev/null
++++ b/Package.swift
+@@ -0,0 +1,49 @@
++// swift-tools-version: 6.0
++// AUTO-SCAFFOLDED by react-native spm scaffold — safe to edit & commit via patch-package.
++// AUTO-SCAFFOLDED-VERSION: 20
++// Cache slot: 0.88.1/dual-flavor
++// Edit the contents below if needed and re-run `npx patch-package <dep-name>`
++// to persist across `npm install`. To regenerate from the podspec, remove
++// this file (or just this marker) and re-run `npx react-native spm scaffold`.
++//
++// Package references are plain relative paths, computed when this file was
++// scaffolded. They stay correct because the file is re-scaffolded per app
++// and cache slot, and any node_modules relayout reinstalls this package
++// (dropping the file) anyway.
++
++import PackageDescription
++
++let package = Package(
++    name: "RNFS",
++    platforms: [.iOS("15.1")],
++    products: [
++        .library(name: "RNFS", targets: ["RNFS"]),
++    ],
++    dependencies: [
++        .package(name: "ReactNative", path: "../../../../xcframeworks"),
++        .package(name: "React-GeneratedCode", path: "../../../ios"),
++    ],
++    targets: [
++        .target(
++            name: "RNFS",
++            dependencies: [.product(name: "ReactHeaders", package: "ReactNative"), .product(name: "ReactNativeHeaders", package: "ReactNative"), .product(name: "ReactNativeDependenciesHeaders", package: "ReactNative"), .product(name: "ReactAppHeaders", package: "React-GeneratedCode")],
++            path: ".",
++            exclude: ["IntegrationTests", "RNFS.xcodeproj", "android", "windows", "node_modules"],
++            sources: [
++                "Downloader.h",
++                "Downloader.m",
++                "NSArray+Map.h",
++                "NSArray+Map.m",
++                "RNFSManager.h",
++                "RNFSManager.m",
++                "Uploader.h",
++                "Uploader.m",
++            ],
++            publicHeadersPath: "include",
++            cSettings: [.headerSearchPath("."), .unsafeFlags(["-include", "react-native-spm-prefix.h"])],
++            cxxSettings: [.headerSearchPath("."), .unsafeFlags(["-include", "react-native-spm-prefix.h"]), .define("DEBUG", .when(configuration: .debug)), .define("NDEBUG", .when(configuration: .release))],
++            linkerSettings: [.linkedFramework("UIKit"), .linkedFramework("Foundation"), .linkedFramework("CoreGraphics")]
++        ),
++    ],
++    cxxLanguageStandard: .cxx20
++)
+diff --git a/include/RNFS/Downloader.h b/include/RNFS/Downloader.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..59c2bba526935c31203b7a2ce53babeb661b1708
+--- /dev/null
++++ b/include/RNFS/Downloader.h
+@@ -0,0 +1,4 @@
++// AUTO-SCAFFOLDED by react-native spm scaffold — the namespaced
++// spelling (<RNFS/Downloader.h>) of the package-root header,
++// matching how CocoaPods header maps expose it.
++#import "../../Downloader.h"
+diff --git a/include/RNFS/NSArray+Map.h b/include/RNFS/NSArray+Map.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..11ff8e5dfb92e69c52753f1a76ca1f4948956a86
+--- /dev/null
++++ b/include/RNFS/NSArray+Map.h
+@@ -0,0 +1,4 @@
++// AUTO-SCAFFOLDED by react-native spm scaffold — the namespaced
++// spelling (<RNFS/NSArray+Map.h>) of the package-root header,
++// matching how CocoaPods header maps expose it.
++#import "../../NSArray+Map.h"
+diff --git a/include/RNFS/RNFSManager.h b/include/RNFS/RNFSManager.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..a1239f9656df3b9321f3647189b08a35bcd1e4bd
+--- /dev/null
++++ b/include/RNFS/RNFSManager.h
+@@ -0,0 +1,4 @@
++// AUTO-SCAFFOLDED by react-native spm scaffold — the namespaced
++// spelling (<RNFS/RNFSManager.h>) of the package-root header,
++// matching how CocoaPods header maps expose it.
++#import "../../RNFSManager.h"
+diff --git a/include/RNFS/Uploader.h b/include/RNFS/Uploader.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..d7f3e67047900fae80850c1200a1db6ae5ae3aa0
+--- /dev/null
++++ b/include/RNFS/Uploader.h
+@@ -0,0 +1,4 @@
++// AUTO-SCAFFOLDED by react-native spm scaffold — the namespaced
++// spelling (<RNFS/Uploader.h>) of the package-root header,
++// matching how CocoaPods header maps expose it.
++#import "../../Uploader.h"
+diff --git a/react-native-spm-prefix.h b/react-native-spm-prefix.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..af5cea0557f2f4aa957419f0fc3f250fd55dbaf5
+--- /dev/null
++++ b/react-native-spm-prefix.h
+@@ -0,0 +1,10 @@
++// AUTO-SCAFFOLDED by react-native spm scaffold — mirrors CocoaPods' default
++// prefix header so ObjC sources that rely on an implicit Foundation/UIKit
++// import compile under SPM (which has no prefix-header mechanism). Safe to
++// delete + regenerate via `npx react-native spm scaffold`.
++#ifdef __OBJC__
++#import <Foundation/Foundation.h>
++#if __has_include(<UIKit/UIKit.h>)
++#import <UIKit/UIKit.h>
++#endif
++#endif

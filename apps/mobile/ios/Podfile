@@ -1,0 +1,3 @@
+# CocoaPods는 사용하지 않는다. iOS 의존성은 Swift Package Manager(`react-native spm`)로 관리한다.
+# @react-native-community/cli 가 이 파일의 존재로 iOS 프로젝트(sourceDir)를 찾기 때문에
+# 마커로만 남겨 둔다. 지우면 `react-native run-ios` 와 `spm` 명령이 동작하지 않는다.

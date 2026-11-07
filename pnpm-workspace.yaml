@@ -1,0 +1,47 @@
+packages:
+  - apps/*
+  - packages/*
+
+allowBuilds:
+  sharp: false
+  unrs-resolver: false
+
+minimumReleaseAgeExclude:
+  - '@babel/core@7.29.13'
+  - '@babel/eslint-parser@7.29.13'
+  - '@babel/generator@7.29.13'
+  - '@babel/helper-compilation-targets@7.29.13'
+  - '@babel/helper-create-class-features-plugin@7.29.13'
+  - '@babel/helper-module-transforms@7.29.13'
+  - '@babel/helper-skip-transparent-expression-wrappers@7.29.13'
+  - '@babel/helpers@7.29.13'
+  - '@babel/parser@7.29.13'
+  - '@babel/plugin-bugfix-safari-rest-destructuring-rhs-array@7.29.13'
+  - '@babel/plugin-transform-block-scoping@7.29.13'
+  - '@babel/plugin-transform-destructuring@7.29.13'
+  - '@babel/plugin-transform-for-of@7.29.13'
+  - '@babel/runtime@7.29.13'
+  - '@babel/traverse@7.29.13'
+  - caniuse-lite@1.0.30001822
+  - metro-babel-transformer@0.87.3
+  - metro-cache-key@0.87.3
+  - metro-cache@0.87.3
+  - metro-config@0.87.3
+  - metro-core@0.87.3
+  - metro-file-map@0.87.3
+  - metro-minify-terser@0.87.3
+  - metro-resolver@0.87.3
+  - metro-runtime@0.87.3
+  - metro-source-map@0.87.3
+  - metro-symbolicate@0.87.3
+  - metro-transform-plugins@0.87.3
+  - metro-transform-worker@0.87.3
+  - metro@0.87.3
+  - ob1@0.87.3
+  - regexpu-core@6.5.4
+  - '@babel/helper-string-parser@7.29.13'
+  - electron-to-chromium@1.5.477
+
+patchedDependencies:
+  react-native-fs@2.20.0: patches/react-native-fs@2.20.0.patch
+  react-native-webview@14.0.1: patches/react-native-webview@14.0.1.patch
